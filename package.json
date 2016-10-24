@@ -62,8 +62,8 @@
     }
   },
   "peerDependencies": {
-    "jasmine-core": "^2.5.2",
-    "lodash": "^4.16.4"
+    "jasmine-core": "^2.*.*",
+    "lodash": "^4.*.*"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
