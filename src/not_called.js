@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-export default (type)=>(list)=>{
+module.exports = (type)=>(list)=>{
   list.forEach((spy)=>{
     let title = spy[0];
     it(`should not call ${title}`, function() {

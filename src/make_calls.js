@@ -26,7 +26,7 @@ const makeTitle = (call_array)=>{
   return title;
 };
 
-export const MakeCalls = (type)=>(list, calls = {})=>{
+module.exports = (type)=>(list, calls = {})=>{
   return list.reduce((prev, curr)=>{
     let title = makeTitle(curr);
     let obj = {};
