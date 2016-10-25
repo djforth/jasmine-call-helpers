@@ -3,7 +3,7 @@ import _ from 'lodash';
 export default (type)=>(list)=>{
   list.forEach((spy)=>{
     let title = spy[0];
-    it(`should not call ${title}`, function() {
+    it(`should not call ${title}`, ()=>{
       title = (title.match(/\./)) ? title.split('.') : title;
       let spy;
       if (_.isArray(title)){

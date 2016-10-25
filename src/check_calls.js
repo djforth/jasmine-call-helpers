@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-module.exports  = function(getSpy, title, getArgs, callCount){
+export default function(getSpy, title, getArgs, callCount){
   describe(`${title}`, function(){
     let args, spy;
     beforeEach(function(){

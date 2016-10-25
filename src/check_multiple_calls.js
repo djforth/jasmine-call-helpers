@@ -1,7 +1,7 @@
 var _          = require('lodash');
 var checkCalls = require('./check_calls');
 
-module.exports  = function(list){
+export default function(list){
   _.forIn(list, (v, k)=>{
     let spy, args, callCount;
     if (_.isArray(v)){
