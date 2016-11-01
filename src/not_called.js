@@ -15,9 +15,8 @@ export default (type)=>(list)=>{
       if (_.isNull(call)){
         expect(spy).not.toHaveBeenCalled();
       } else {
-        expect(spy.calls.count()).not.toEqual(call);
+        expect(spy.calls.count()).not.toEqual(call + 1);
       }
-
     });
   });
 };
