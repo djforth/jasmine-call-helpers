@@ -1,6 +1,6 @@
 {
   "name": "@djforth/jasmine-call-helpers",
-  "version": "1.0.4",
+  "version": "2.0.0-0",
   "description": "Check Stubs or Spies have been called",
   "main": "index.js",
   "scripts": {
