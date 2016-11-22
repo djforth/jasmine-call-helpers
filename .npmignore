@@ -1,2 +1,5 @@
 /spec
 /src
+.apconfig
+.babelrc
+yarn.lock
