@@ -59,7 +59,7 @@ describe('JasmineCallHelper', function(){
 
   describe('check foo calls', function(){
     beforeEach(()=>{
-      let foo = spies_stubs.get('foo')
+      let foo = spies_stubs.get('foo');
       foo('bar', spy);
       foo('bar1');
       foo('bar2');
