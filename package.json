@@ -1,6 +1,6 @@
 {
   "name": "@djforth/jasmine-call-helpers",
-  "version": "2.0.0-beta",
+  "version": "2.0.0-beta.1",
   "description": "Jasmine Check calls helper",
   "main": "index.js",
   "repository": "https://github.com/djforth/jasmine-call-helpers.git",
