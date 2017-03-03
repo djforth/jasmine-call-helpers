@@ -8,6 +8,16 @@
     "add-module-exports"
   ],
   "env": {
+    "production":{
+      "plugins": [
+        [
+          "lodash-modularize",
+          {
+              "lodashVersion": "4.17.4"
+          }
+        ]
+      ]
+    },
     "test": {
       "plugins": [
         [
