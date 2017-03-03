@@ -20,7 +20,6 @@ const spyType = (spyName)=>{
 };
 
 const makeSpyCall = (SpyManager)=>(spyName)=>{
-  let spy;
   switch (spyType(spyName)) {
     case 1: return ()=>SpyManager.get(spyName);
     case 2: return ()=>SpyManager.get(spyName.stub, true);

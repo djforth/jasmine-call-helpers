@@ -10,7 +10,7 @@ const notCaller = (SpyManager, spy)=>{
     if (_.isNull(call)){
       expect(spy).not.toHaveBeenCalled();
     } else {
-      expect(spy.calls.count()).not.toEqual(call + 1);
+      expect(spy.mock.calls.length).not.toEqual(call + 1);
     }
   });
 };
