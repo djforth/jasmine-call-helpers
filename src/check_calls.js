@@ -1,4 +1,4 @@
-import _ , {
+import {
   isArray
   , isPlainObject
   , isFunction
@@ -23,13 +23,13 @@ const makeTestTitle = (title, count, name)=>{
 const checkType = (arg)=>{
   if (isArray(arg)) return 'array';
   if (isPlainObject(arg)) return 'object';
-  if (isFunction(arg)) {
+  if (isFunction(arg)){
     return (arg.mock) ? 'spy' : 'function';
   }
   if (Map.isMap(arg)) return 'ImmmutableMap';
   if (List.isList(arg)) return 'ImmmutableList';
   return typeof arg;
-}
+};
 
 const getArgumentType = (arg)=>{
   switch (checkType(arg)){
@@ -37,8 +37,8 @@ const getArgumentType = (arg)=>{
     case 'string': return arg;
     case 'array': return arg.join(',');
     case 'object': return JSON.stringify(arg);
-    case 'function': return 'a function'
-    case 'spy': return 'a spy/mock'
+    case 'function': return 'a function';
+    case 'spy': return 'a spy/mock';
     case 'ImmmutableMap': return JSON.stringify(arg.toObject());
     case 'ImmmutableList': return arg.toList().join(',');
     default:
@@ -47,8 +47,8 @@ const getArgumentType = (arg)=>{
 };
 
 const createArgMsg = (arg, count)=>{
-  let msg = `should call with ${getArgumentType(arg)}`
-  if (count > 0) {
+  let msg = `should call with ${getArgumentType(arg)}`;
+  if (count > 0){
     msg += `on call ${count}`;
   }
 
@@ -71,7 +71,7 @@ const checkArguments = (getSpy, arg, count = 0, argNo = 0)=>{
         break;
       case 'ImmmutableMap':
       case 'ImmmutableList':
-        expect(call).equalsImmutable(arg)
+        expect(call).equalsImmutable(arg);
         break;
       default:
         expect(call).toEqual(arg);

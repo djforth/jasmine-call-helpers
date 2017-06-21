@@ -20,7 +20,7 @@ const spyType = (spyName)=>{
 };
 
 const makeSpyCall = (SpyManager)=>(spyName)=>{
-  switch (spyType(spyName)) {
+  switch (spyType(spyName)){
     case 1: return ()=>SpyManager.get(spyName);
     case 2: return ()=>SpyManager.get(spyName.stub, true);
     case 3: return ()=>SpyManager.get(spyName.spy, false);
@@ -32,7 +32,7 @@ const makeSpyCall = (SpyManager)=>(spyName)=>{
 const hasArgs = (item)=>{
   let details = item[0];
   if (item.length > 1) return true;
-  if (_.isPlainObject(details)) {
+  if (_.isPlainObject(details)){
     return details.hasOwnProperty('name') ||
       details.hasOwnProperty('count');
   }

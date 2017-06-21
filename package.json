@@ -9,6 +9,7 @@
   "devDependencies": {
     "@djforth/jest-matchers": "^1.0.1",
     "@djforth/stubs-spy-manager-jest": "1.0.3",
+    "@morsedigital/jest-config": "^1.0.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^19.0.0",
